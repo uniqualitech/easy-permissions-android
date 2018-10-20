@@ -2,7 +2,8 @@
 we can use this library when run time permission is needed for take photo from gallery and camera
 
 
-*For Camera*
+For Camera
+```
 new GalleryCameraPhotoHandler.Builder().setContext(getActivity())
                     .setPhotoHandler(GalleryCameraPhotoHandler.PhotoHandler.CAMERA)
                     .setPhotoCallback(new GalleryCameraPhotoHandler.PickPhotoCallback() {
@@ -15,9 +16,11 @@ new GalleryCameraPhotoHandler.Builder().setContext(getActivity())
                         }
                     })
                     .build();
+```
                     
                     
-*For Gallery*
+For Gallery
+```
 new GalleryCameraPhotoHandler.Builder().setContext(getActivity())
                     .setPhotoHandler(GalleryCameraPhotoHandler.PhotoHandler.GALLERY)
                     .setPhotoCallback(new GalleryCameraPhotoHandler.PickPhotoCallback() {
@@ -30,9 +33,11 @@ new GalleryCameraPhotoHandler.Builder().setContext(getActivity())
                         }
                     })
                     .build();
+```
 
 
-*For Other Permission*
+For Other Permission
+```
 new PermissionHandler.Builder().setContext(getWeakActivity())
                 .setAllPermission(new String[]{Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE})
                 .setPermissionCallback(new PermissionInterface() {
@@ -47,3 +52,4 @@ new PermissionHandler.Builder().setContext(getWeakActivity())
                        
                     }
                 }).build();
+```
